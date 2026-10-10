@@ -65,7 +65,10 @@ requires-python = ">=3.9"
 
 [project.optional-dependencies]
 crypto = [
-    "cryptography>=3.4.0",
+    # Epic compat build: the `cryptography` distribution is provided by the
+    # `crpt-graph` fork (same `cryptography` import package, version
+    # 42.0.5+epic.1). The extra name `crypto` is preserved.
+    "crpt-graph==42.0.5+epic.1",
 ]
 
 [project.readme]
